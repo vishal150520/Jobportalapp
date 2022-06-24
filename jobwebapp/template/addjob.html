@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add-Job</title>
+</head>
+    
+<body align="center"style="background-color:pink;">
+    <form action="{% url 'jobsave' %}" method="POST">
+        {% csrf_token %}
+        <P>Add Job Details</P><br>
+        <label>Job-Id</label><br>
+        <input type="text" name="jobid"><br><br>
+        <label>Job-Details</label><br>
+        <textarea name="jobd" rows="20"cols="50"></textarea><br>
+        <input type="submit" value="save">
+        {% csrf_token %}
+    </form>
+    {{n}}
+</body>
+</html>

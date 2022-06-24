@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+            border:1px black solid;
+        }
+        
+    </style>
+</head>
+<body align="center" style="background-color:white;" >
+    {% if data %}
+    <P>View Jobs</P>
+    <table align="center">
+        <tr>
+            <th>jobid</th>
+            <th >jobdesc</th>
+        </tr>
+    {% for x in data %}
+    <tr>
+        <td>{{x.jobid}}</td>
+        <td>{{x.jobdesc}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+    <P>no data</P>
+    {% endif %}
+    <p>click for back</p>
+    <a href="{% url 'cm1' %}">back</a>
+</body>
+</html>

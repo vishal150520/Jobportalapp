@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Sign-Up</title>
+   
+</head>
+<body align="center" style="background-color:pink;">
+    <form action="{% url 'temp1' %}" method="POST">
+        {% csrf_token %}
+            <h1><p>Candidate-SignUp</p></h1>
+            <label>FirstName</label><br>
+            <input type="text" name="fname">
+            <br><br>
+            <label>LastName</label><br>
+            <input type="text"name="lname">
+            <br><br>
+            <label>Gender</label><br>
+            <input type="text" name="gender">
+            <br><br>
+            <label>Date Of Birth(DD-MM-YYYY)</label><br>
+            <input type="text" name="dateofbirth">
+            <br><br>
+            <label>Highest-Qualification</label><br>
+            <input type="text" name="qualification">
+            <br><br>
+            <label>Percentage</label><br>
+            <input type="text" name="percentage">
+            <br><br>
+            <label>Skills</label><br>
+            <input type="text" name="skills">
+            <br><br>
+            <label>E-Mail</label><br>
+            <input type="text" name="email">
+            <br><br>
+            <label>Contact-No</label><br>
+            <input type="text" name="contactno">
+            <br><br>
+            <label>Password</label><br>
+            <input type="text" name="password">
+            <br><br>
+            <label>Project-Details</label><br><br>
+            <input type="text" name="projectd">
+            <br><br>
+            <input type="checkbox">
+            <label>I Have Agree terms and condtions</label><br><br>
+            <p>Click on Sign-Up Button</p>
+            <input type="submit" value="Sign-Up">
+        {% csrf_token %}
+    </form>
+</body>
+
+</html>

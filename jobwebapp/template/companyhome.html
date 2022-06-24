@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company</title>
+</head>
+<body align="center"style="background-color:pink;">
+    {{n}}<br><br>
+    <a href="{% url 'logout' %}">Log-Out</a><br>
+    <a href="{% url 'addjob' %}">Add-Job</a><br>
+    <a href="{% url 'uptjob' %}">Update-Job</a><br>
+    <a href="{% url 'deljob' %}">Delete job</a><br>
+    <a href="{% url 'viewjob' %}">View Job</a><br>
+    <a href="{% url 'ucd' %}">Update Company Details</a><br>
+    <a href="{% url 'acl' %}">Applied Candidate List</a><br>
+</body>
+</html>

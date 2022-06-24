@@ -1,0 +1,53 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update</title>
+</head>
+<body align="center" style="background-color:pink;">
+    <form action="{% url 'ucd2' %}" method="POST">
+    {% csrf_token %}
+    <h1><p>Update Company profile</p></h1>
+    <label>Company-Name</label><br>
+    <input type="text" name="cn">
+    <br><br>
+    <label>Company-GST-No</label><br>
+    <input type="text" name="cgstno">
+    <br><br>
+    <label>HR-Manager-FName</label><br>
+    <input type="text"name='fname'>
+    <br><br>
+    <label>HR-Manager-LName</label><br>
+    <input type="text" name='lname'>
+    <br><br>
+    <label>Date Of Birth(DD-MM-YYYY)</label><br>
+    <input type="text" name='dob'>
+    <br><br>
+    <label>Gender</label><br>
+    <input type="text" name='gender'>
+    <br><br>
+    <label>Emp-Id</label><br>
+    <input type="text" name="empid">
+    <br><br>
+    <label>Contact</label><br>
+    <input type="text" name='contact'>
+    <br><br>
+    <label>E-Mail</label><br>
+    <input type="text" name="email">
+    <br><br>
+    <label>Password</label><br>
+    <input type="text" name='pass'>
+    <br><br>
+    <label>Job-Description</label><br><br>
+    <input type="text" name='jd'>
+    <br><br>
+    <input type="checkbox">
+    <label>I Have Agree terms and condtions</label><br><br>
+    <p>Click on Sign-Up Button</p>
+    <input type="submit" value="Sign-Up">
+    {% csrf_token %}
+</form>
+</body>
+</html>

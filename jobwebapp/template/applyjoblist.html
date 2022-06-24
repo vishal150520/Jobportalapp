@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th,td{
+            border:1px black solid;
+        }
+        
+    </style>
+</head>
+<body align="center" style="background-color:white;" >
+    {% if data %}
+    <P>Applied Candidate list</P>
+    <table align="center">
+        <tr>
+            <th>firstnamw</th>
+            <th>lastname</th>
+            <th>gender</th>
+            <th>dateofbirth</th>
+            <th>qualification</th>
+            <th>percentage</th>
+            <th>skills</th>
+            <th>email</th>
+            <th>contactno</th>
+            <th>jonid</th>
+            <th>projectdetails</th>
+        </tr>
+    {% for x in data %}
+    <tr>
+        <td>{{x.firstname}}</td>
+        <td>{{x.lastname}}</td>
+        <td>{{x.gender}}</td>
+        <td>{{x.dateofbirth}}</td>
+        <td>{{x.qualification}}</td>
+        <td>{{x.percentage}}</td>
+        <td>{{x.skills}}</td>
+        <td>{{x.email}}</td>
+        <td>{{x.contactno}}</td>
+        <td>{{x.jonid}}</td>
+        <td>{{x.projectdetails}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+    {% else %}
+    <P>no data</P>
+    {% endif %}
+    <p>click for back</p>
+    <a href="{% url 'cm1' %}">back</a>
+</body>
+</html>
